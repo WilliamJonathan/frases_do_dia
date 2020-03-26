@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
-/*Aqui configura e retorna o Scaffold*/
+
 class _HomeState extends State<Home> {
 
   var _frases = [
@@ -26,6 +26,7 @@ class _HomeState extends State<Home> {
 
   var _fraseGerada = "Clique abaixo para gerar uma frase";
 
+  /*Metodo para gerar a frase random*/
   void _gerarFrase(){
     var numeroSorteado = Random().nextInt(_frases.length);
     setState(() {
@@ -33,6 +34,7 @@ class _HomeState extends State<Home> {
     });
   }
 
+  /*Aqui configura e retorna o Scaffold*/
   @override
   Widget build(BuildContext context) {
     return Scaffold(
